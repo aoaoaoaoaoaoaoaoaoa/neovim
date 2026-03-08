@@ -24,3 +24,6 @@ vim.keymap.set('n', '<leader>nl', ':TodoTelescope<CR>')
 
 -- ToggleTerm
 vim.keymap.set('n', '<leader>s', ':ToggleTerm direction=float<CR>')
+
+-- Shortcut for fast esc
+vim.keymap.set('i', 'jj', '<Esc>')
