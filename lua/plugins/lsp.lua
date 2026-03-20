@@ -45,11 +45,11 @@ return {
 
         local opts = { buffer = ev.buf }
 
-        vim.keymap.set("n", "lD", vim.lsp.buf.declaration, opts)
-        vim.keymap.set("n", "ld", vim.lsp.buf.definition, opts)
-        vim.keymap.set("n", "lk", vim.lsp.buf.hover, opts)
-        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-        vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+        -- vim.keymap.set("n", "lD", vim.lsp.buf.declaration, opts)
+        -- vim.keymap.set("n", "ld", vim.lsp.buf.definition, opts)
+        -- vim.keymap.set("n", "lk", vim.lsp.buf.hover, opts)
+        -- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+        -- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 
         vim.keymap.set({ "n", "v" }, "<space>r", vim.lsp.buf.code_action, opts)
         vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
