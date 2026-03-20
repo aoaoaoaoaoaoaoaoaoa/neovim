@@ -1,6 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
+  branch = "master",
   event = { "BufReadPost", "BufNewFile" },
 
   opts = {
@@ -9,6 +10,8 @@ return {
       "css",
       "dockerfile",
       "html",
+      "typescript",
+      "tsx",
       "javascript",
       "json",
       "json5",
@@ -29,11 +32,11 @@ return {
     },
 
     indent = {
-      enable = true,
+      enable = false,
     },
   },
 
   config = function(_, opts)
-    require("nvim-treesitter.config").setup(opts)
+    require("nvim-treesitter.configs").setup(opts)
   end,
 }

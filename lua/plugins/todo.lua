@@ -27,7 +27,7 @@ return {
 
       PERF = {
         icon = " ",
-        alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" },
+        alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE", "AOAOA" },
       },
 
       NOTE = {

@@ -69,7 +69,11 @@ return {
             key = "b",
             keymap = "SPC g b",
             key_hl = "Number",
-            action = ":Telescope git_branches",
+            action = function()
+              if vim.fn.isdirectory('.git') == 1 then
+                vim.cmd("Telescope git_branches")
+              end
+            end,
           },
         },
       },

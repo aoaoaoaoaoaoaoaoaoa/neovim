@@ -12,8 +12,20 @@ return {
       },
     })
 
+
     -- RUFF
-    vim.lsp.config("ruff", {})
+    -- vim.lsp.config("ruff", {
+    --   -- запускать ruff как language server
+    --   cmd = { "ruff", "server" },
+    --   -- только для Python
+    --   filetypes = { "python" },
+    --   -- базовые настройки (можно потом выкинуть, если что‑то конфликтует)
+    --   settings = {
+    --     configurationPreference = "filesystemFirst",
+    --     lint = { enable = true },
+    --     format = { enable = true },
+    --   },
+    -- })
 
     -- JS / TS
     vim.lsp.config("ts_ls", {})
@@ -26,7 +38,7 @@ return {
 
     -- включаем серверы
     vim.lsp.enable("pyright")
-    vim.lsp.enable("ruff")
+    -- vim.lsp.enable("ruff")
     vim.lsp.enable("ts_ls")
     vim.lsp.enable("html")
     vim.lsp.enable("cssls")
@@ -45,11 +57,11 @@ return {
 
         local opts = { buffer = ev.buf }
 
-        vim.keymap.set("n", "lD", vim.lsp.buf.declaration, opts)
-        vim.keymap.set("n", "ld", vim.lsp.buf.definition, opts)
-        vim.keymap.set("n", "lk", vim.lsp.buf.hover, opts)
-        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-        vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+        -- vim.keymap.set("n", "lD", vim.lsp.buf.declaration, opts)
+        -- vim.keymap.set("n", "ld", vim.lsp.buf.definition, opts)
+        -- vim.keymap.set("n", "lk", vim.lsp.buf.hover, opts)
+        -- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+        -- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 
         vim.keymap.set({ "n", "v" }, "<space>r", vim.lsp.buf.code_action, opts)
         vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
