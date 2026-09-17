@@ -24,30 +24,31 @@ return {
 
       { "<leader>e", desc = "Open Diagnostic Window" },
 
-      { "<leader>l", group = "LSP" },
+      { "<leader>l", group = "LSP", icon = "󰘦" },
       { "<leader>lD", desc = "Declaration" },
       { "<leader>ld", desc = "Definition" },
       { "<leader>lk", desc = "Hover" },
 
-      { "<leader>t", group = "Tree" },
+      { "<leader>t", group = "Tree", icon = "󰙅" },
       { "<leader>tt", desc = "Tree Toggle" },
-      { "<leader>tf", desc = "Tree Focus" },
+      { "<leader>tf", desc = "Tree Focus", icon = "󰙅" },
 
-      { "<leader>n", group = "TodoList" },
+      { "<leader>n", group = "TodoList", icon = "󰄬" },
       { "<leader>nl", desc = "Open List" },
 
       { "<leader>s", desc = "Open Terminal" },
 
-      { "<leader>r", desc = "Ruff" },
-
-      { "<leader>c", group = "Color Schemes" },
+      { "<leader>r", desc = "Ruff", icon = { icon = "󰌠", color = "yellow"}, },
+      { "<leader>c", group = "Color Schemes", icon = "󰏘" },
       { "<leader>cs", desc = "Open" },
 
+       -- Git
        { "<leader>g", group = "Git" },
         { "<leader>gb", desc = "Open Branches" },
         { "<leader>gc", desc = "Open Commits" },
         { "<leader>gs", desc = "Open Status" },
 
+        -- GitSign
         { "<leader>gh", group = "Hunks" },
         { "<leader>ghs", desc = "Stage Hunk" },
         { "<leader>ghr", desc = "Reset Hunk" },
@@ -57,6 +58,9 @@ return {
         { "<leader>ghb", desc = "Blame Line" },
         { "<leader>ghd", desc = "Diff" },
         { "<leader>ghi", desc = "Inline Hunk" },
+
+        --BufferLine for closing current Tab
+        { "<leader>x", desc = "Close Buffer"}
     })
   end,
 }
