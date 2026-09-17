@@ -1,11 +1,16 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  branch = "master",
-  event = { "BufReadPost", "BufNewFile" },
 
-  opts = {
-    ensure_installed = {
+  branch = "main",
+
+  lazy = false,
+
+  build = ":TSUpdate",
+
+  config = function()
+    require("nvim-treesitter").setup()
+
+    require("nvim-treesitter").install({
       "bash",
       "css",
       "dockerfile",
@@ -22,21 +27,31 @@ return {
       "c",
       "go",
       "rust",
-    },
+    })
 
-    sync_install = false,
-    auto_install = true,
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = {
+        "bash",
+        "css",
+        "dockerfile",
+        "html",
+        "typescript",
+        "typescriptreact",
+        "javascript",
+        "json",
+        "json5",
+        "lua",
+        "python",
+        "vim",
+        "yaml",
+        "c",
+        "go",
+        "rust",
+      },
 
-    highlight = {
-      enable = true,
-    },
-
-    indent = {
-      enable = false,
-    },
-  },
-
-  config = function(_, opts)
-    require("nvim-treesitter.configs").setup(opts)
+      callback = function(args)
+        vim.treesitter.start(args.buf)
+      end,
+    })
   end,
 }
