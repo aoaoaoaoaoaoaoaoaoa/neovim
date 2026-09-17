@@ -31,9 +31,9 @@ return {
       },
 
       NOTE = {
-        icon = " ",
-        color = "hint",
-        alt = { "INFO" },
+        icon = "󰎞",
+        color = "default",
+        alt = { "INFO", "NOTE" },
       },
     },
 
