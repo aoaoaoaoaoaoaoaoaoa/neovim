@@ -42,6 +42,21 @@ return {
 
       { "<leader>c", group = "Color Schemes" },
       { "<leader>cs", desc = "Open" },
+
+       { "<leader>g", group = "Git" },
+        { "<leader>gb", desc = "Open Branches" },
+        { "<leader>gc", desc = "Open Commits" },
+        { "<leader>gs", desc = "Open Status" },
+
+        { "<leader>gh", group = "Hunks" },
+        { "<leader>ghs", desc = "Stage Hunk" },
+        { "<leader>ghr", desc = "Reset Hunk" },
+        { "<leader>ghp", desc = "Preview Hunk" },
+        { "<leader>ghS", desc = "Stage Buffer" },
+        { "<leader>ghR", desc = "Reset Buffer" },
+        { "<leader>ghb", desc = "Blame Line" },
+        { "<leader>ghd", desc = "Diff" },
+        { "<leader>ghi", desc = "Inline Hunk" },
     })
   end,
 }
