@@ -66,8 +66,11 @@ return {
         { "<leader>p", desc = "Utils", icon = "󰒓"},
         -- Conform Formatting
         { "<leader>pf", desc = "Format", icon = "󰛨" },
-        { "<leader>po", desc = "Oil", icon = "󰝰"}
+        { "<leader>po", desc = "Oil", icon = "󰝰"},
         
+        -- View for save folders and etc
+        { "<leader>pv", desc = "Save View", icon = "󰆓" },
+        { "<leader>pd", desc = "Delete View", icon = "󰆴" },
     })
   end,
 }
