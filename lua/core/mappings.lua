@@ -40,3 +40,8 @@ vim.keymap.set("n", "<leader>pf", function()
 end, {
     desc = "Format",
 })
+
+--Oil
+vim.keymap.set('n', '<leader>po', ':Oil<CR>', {
+    desc = "Open Oil",
+})

@@ -66,6 +66,7 @@ return {
         { "<leader>p", desc = "Utils", icon = "󰒓"},
         -- Conform Formatting
         { "<leader>pf", desc = "Format", icon = "󰛨" },
+        { "<leader>po", desc = "Oil", icon = "󰝰"}
         
     })
   end,
