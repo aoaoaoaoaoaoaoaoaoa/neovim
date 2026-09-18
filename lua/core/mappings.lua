@@ -41,11 +41,6 @@ end, {
     desc = "Format",
 })
 
---Oil
-vim.keymap.set('n', '<leader>po', ':Oil<CR>', {
-    desc = "Open Oil",
-})
-
 -- View for saving folders and etc
 vim.keymap.set("n", "<leader>pv", "<cmd>mkview<cr>", {
     desc = "Save View",

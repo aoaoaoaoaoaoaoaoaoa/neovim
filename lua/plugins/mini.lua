@@ -5,5 +5,6 @@ return {
   config = function()
     require("mini.move").setup()
     require("mini.pairs").setup()
+    require("mini.animate").setup()
   end,
 }
