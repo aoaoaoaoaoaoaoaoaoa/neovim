@@ -30,3 +30,13 @@ vim.keymap.set('i', 'jj', '<Esc>')
 
 --BufferLine for closing current Tab
 vim.keymap.set('n', '<leader>x', '<cmd>BufferLinePickClose<CR>')
+
+--Conform formatting
+vim.keymap.set("n", "<leader>pf", function()
+    require("conform").format({
+        async = true,
+        lsp_format = "fallback",
+    })
+end, {
+    desc = "Format",
+})

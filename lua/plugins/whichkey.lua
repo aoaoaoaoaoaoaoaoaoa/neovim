@@ -60,7 +60,13 @@ return {
         { "<leader>ghi", desc = "Inline Hunk" },
 
         --BufferLine for closing current Tab
-        { "<leader>x", desc = "Close Buffer"}
+        { "<leader>x", desc = "Close Buffer"},
+
+        --utils
+        { "<leader>p", desc = "Utils", icon = "󰒓"},
+        -- Conform Formatting
+        { "<leader>pf", desc = "Format", icon = "󰛨" },
+        
     })
   end,
 }
