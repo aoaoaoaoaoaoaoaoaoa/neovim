@@ -5,6 +5,7 @@ return {
     require("hlchunk").setup({
       chunk = {
         enable = true,
+        delay = 50;
       },
 
       indent = {
