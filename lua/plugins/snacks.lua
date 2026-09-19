@@ -5,9 +5,9 @@ return {
     lazy = false,
 
     opts = {
-        scroll = {
-            enabled = true,
-        },
+        -- scroll = {
+        --     enabled = true,
+        -- },
         animate = {
             fps = 120,
         },
