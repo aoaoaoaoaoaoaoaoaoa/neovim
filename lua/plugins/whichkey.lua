@@ -70,6 +70,9 @@ return {
         -- View for save folders and etc
         { "<leader>pv", desc = "Save View", icon = "󰆓" },
         { "<leader>pd", desc = "Delete View", icon = "󰆴" },
+
+        -- for path find
+        { "<leader>tp", desc = "Change root", icon = "󰉋"}
     })
   end,
 }

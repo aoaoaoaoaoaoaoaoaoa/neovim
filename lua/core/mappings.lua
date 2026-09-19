@@ -49,3 +49,13 @@ vim.keymap.set("n", "<leader>pv", "<cmd>mkview<cr>", {
 vim.keymap.set("n", "<leader>pd", "<cmd>delview<cr>", {
     desc = "Delete View",
 })
+
+-- for path find
+vim.keymap.set("n", "<leader>tp", function()
+  local path = vim.fn.input("Tree path: ", vim.fn.getcwd() .. "/")
+
+  if path ~= "" then
+    require("nvim-tree.api").tree.open()
+    require("nvim-tree.api").tree.change_root(path)
+  end
+end, { desc = "Change root by path" })
