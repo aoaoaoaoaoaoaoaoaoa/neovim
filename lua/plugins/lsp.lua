@@ -3,6 +3,14 @@ return {
 
   config = function()
 
+    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+      vim.lsp.handlers.hover,
+      {
+        border = "rounded",
+        max_width = 120,
+        max_height = 20,
+      }
+    )
     -- PYTHON
     vim.lsp.config("pyright", {
       settings = {
