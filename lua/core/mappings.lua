@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 
 -- Quit
 vim.keymap.set('n', '<C-q>', '<cmd>:q<CR>')
-
 -- Copy all text
 vim.keymap.set('n', '<C-a>', '<cmd>%y+<CR>')
 
@@ -18,7 +17,6 @@ vim.keymap.set('n', '<leader>tf', ':NvimTreeFocus<CR>')
 vim.keymap.set('n','<Tab>', ':BufferLineCycleNext<CR>')
 vim.keymap.set('n','<S-Tab>', ':BufferLineCyclePrev<CR>')
 vim.keymap.set('n', '<C-l>', ':BufferLineCloseOthers<CR>')
-
 -- TodoList
 vim.keymap.set('n', '<leader>nl', ':TodoTelescope<CR>')
 
