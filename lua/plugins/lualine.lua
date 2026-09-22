@@ -111,6 +111,73 @@ return {
                     "location",
                 },
             },
+
+            tabline = {
+                lualine_a = {
+                    {
+                        "buffers",
+
+                        show_filename_only = true,
+                        hide_filename_extension = false,
+                        show_modified_status = true,
+
+                        mode = 0,
+
+                        -- max_length = vim.o.columns * 2 / 3,
+
+                        use_mode_colors = true,
+
+                        buffers_color = {
+                            active = "lualine_a_normal",
+                            inactive = "lualine_b_normal",
+                        },
+
+                        component_separators = {
+                            left = "",
+                            right = "",
+                        },
+
+                        symbols = {
+                            modified = " ●",
+                            alternate_file = "",
+                            directory = "",
+                        },
+                    },
+                },
+
+                lualine_b = {},
+                lualine_c = {},
+                lualine_x = {},
+                lualine_y = {},
+                lualine_z = {},
+            },
+
         })
+
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = "dashboard",
+            callback = function()
+                vim.opt_local.showtabline = 0
+            end,
+        })
+
+        vim.api.nvim_create_autocmd("BufEnter", {
+            callback = function()
+                if vim.bo.filetype == "dashboard" then
+                    vim.opt_local.showtabline = 0
+                else
+                    vim.opt.showtabline = 2
+                end
+            end,
+        })
+
+        vim.schedule(function()
+            if vim.bo.filetype == "dashboard" then
+                vim.opt_local.showtabline = 0
+            else
+                vim.opt.showtabline = 2
+            end
+        end)
+
     end,
 }

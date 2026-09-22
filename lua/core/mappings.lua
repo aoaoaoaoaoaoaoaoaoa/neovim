@@ -24,22 +24,35 @@ vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", {
 })
 
 -- BufferLine
-vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", {
+-- vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", {
+--     desc = "Next buffer",
+-- })
+--
+-- vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", {
+--     desc = "Previous buffer",
+-- })
+--
+-- vim.keymap.set("n", "<leader>bx", "<cmd>BufferLinePickClose<CR>", {
+--     desc = "Pick buffer to close",
+-- })
+--
+-- vim.keymap.set( "n", "<leader>bp", "<cmd>BufferLineTogglePin<CR>", {
+--         desc = "Toggle buffer pin",
+--     }
+-- )
+
+--buffers
+vim.keymap.set("n", "<Tab>", "<cmd>bnext<CR>", {
     desc = "Next buffer",
 })
 
-vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", {
+vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<CR>", {
     desc = "Previous buffer",
 })
 
-vim.keymap.set("n", "<leader>bx", "<cmd>BufferLinePickClose<CR>", {
-    desc = "Pick buffer to close",
+vim.keymap.set("n", "<leader>bx", "<cmd>bdelete<CR>", {
+    desc = "Delete buffer",
 })
-
-vim.keymap.set( "n", "<leader>bp", "<cmd>BufferLineTogglePin<CR>", {
-        desc = "Toggle buffer pin",
-    }
-)
 
 -- TodoList
 vim.keymap.set('n', '<leader>nl', ':TodoTelescope<CR>')

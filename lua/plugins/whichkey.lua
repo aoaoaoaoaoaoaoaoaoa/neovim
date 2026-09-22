@@ -1,6 +1,5 @@
 return {
-  "folke/which-key.nvim",
-  event = "VeryLazy",
+  "folke/which-key.nvim", event = "VeryLazy",
 
   init = function()
     vim.o.timeout = true
@@ -59,9 +58,6 @@ return {
         { "<leader>ghd", desc = "Diff" },
         { "<leader>ghi", desc = "Inline Hunk" },
 
-        --BufferLine for closing current Tab
-        { "<leader>x", desc = "Close Buffer"},
-
         --utils
         { "<leader>p", desc = "Utils", icon = "󰒓"},
         -- Conform Formatting
@@ -75,9 +71,10 @@ return {
         { "<leader>tp", desc = "Change root", icon = "󰉋"},
 
         -- bufferline
-       { "<leader>b", group = "Bufferline" },
-        { "<leader>bp", desc = "Pin buffer"},
-        { "<leader>bx", desc = "Close buffer"},
+       -- { "<leader>b", group = "Bufferline" },
+        -- { "<leader>x", desc = "Close Buffer"},
+       --  { "<leader>bp", desc = "Pin buffer"},
+       --  { "<leader>bx", desc = "Close buffer"},
     })
   end,
 }
