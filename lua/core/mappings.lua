@@ -13,10 +13,34 @@ vim.keymap.set('n', '<C-s>', '<cmd>:w<CR>')
 vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>tf', ':NvimTreeFocus<CR>')
 
+-- Tabby
+-- закрыть текущую вкладку
+vim.keymap.set("n", "<C-l>", ":tabclose<CR>", {
+    desc = "Tab close"
+})
+-- новая вкладка
+vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", {
+    desc = "Tab new"
+})
+
 -- BufferLine
-vim.keymap.set('n','<Tab>', ':BufferLineCycleNext<CR>')
-vim.keymap.set('n','<S-Tab>', ':BufferLineCyclePrev<CR>')
-vim.keymap.set('n', '<C-l>', ':BufferLineCloseOthers<CR>')
+vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", {
+    desc = "Next buffer",
+})
+
+vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", {
+    desc = "Previous buffer",
+})
+
+vim.keymap.set("n", "<leader>bx", "<cmd>BufferLinePickClose<CR>", {
+    desc = "Pick buffer to close",
+})
+
+vim.keymap.set( "n", "<leader>bp", "<cmd>BufferLineTogglePin<CR>", {
+        desc = "Toggle buffer pin",
+    }
+)
+
 -- TodoList
 vim.keymap.set('n', '<leader>nl', ':TodoTelescope<CR>')
 

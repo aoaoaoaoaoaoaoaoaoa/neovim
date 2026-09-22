@@ -2,6 +2,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.opt.termguicolors = true
+vim.opt.laststatus = 3
 
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font:h14"

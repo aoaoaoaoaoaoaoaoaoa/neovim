@@ -72,7 +72,12 @@ return {
         { "<leader>pd", desc = "Delete View", icon = "󰆴" },
 
         -- for path find
-        { "<leader>tp", desc = "Change root", icon = "󰉋"}
+        { "<leader>tp", desc = "Change root", icon = "󰉋"},
+
+        -- bufferline
+       { "<leader>b", group = "Bufferline" },
+        { "<leader>bp", desc = "Pin buffer"},
+        { "<leader>bx", desc = "Close buffer"},
     })
   end,
 }
