@@ -43,6 +43,7 @@ return {
                 disabled_filetypes = {
                     statusline = {
                         "NvimTree",
+                        "dashboard"
                     },
                 },
             },

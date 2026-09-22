@@ -1,6 +1,8 @@
 return {
     "akinsho/bufferline.nvim",
 
+    version = "*",
+
     dependencies = {
         "nvim-tree/nvim-web-devicons",
     },
@@ -8,14 +10,17 @@ return {
     event = "VeryLazy",
 
     config = function()
+        vim.opt.termguicolors = true
+
         require("bufferline").setup({
             options = {
+                -- Работаем именно с буферами
                 mode = "buffers",
 
-                separator_style = "slant",
-
+                -- Без номеров перед именами
                 numbers = "none",
 
+                -- Диагностика LSP
                 diagnostics = "nvim_lsp",
 
                 diagnostics_indicator = function(_, _, diagnostics)
@@ -38,13 +43,12 @@ return {
                     return table.concat(result, " ")
                 end,
 
+                -- Иконки файлов
+                color_icons = true,
                 show_buffer_close_icons = true,
                 show_close_icon = false,
 
-                color_icons = true,
-
-                always_show_bufferline = true,
-
+                -- Отступ под NvimTree
                 offsets = {
                     {
                         filetype = "NvimTree",
@@ -54,6 +58,7 @@ return {
                     },
                 },
 
+                -- Закреплённые буферы
                 groups = {
                     items = {
                         require("bufferline.groups").builtin.pinned:with({
@@ -61,39 +66,29 @@ return {
                         }),
                     },
                 },
-
-                -- indicator = {
-                --     style = "underline",
-                -- },
-            },
-
-            highlights = {
-                fill = {
-                    bg = "NONE",
-                },
-
-                background = {
-                    bg = "NONE",
-                },
-
-                buffer_selected = {
-                    bold = true,
-                    italic = false,
-                },
-
-                separator = {
-                    bg = "NONE",
-                },
-
-                separator_selected = {
-                    bg = "NONE",
-                },
-
-                separator_visible = {
-                    bg = "NONE",
-                },
             },
         })
 
+        -- Dashboard: прячем всю верхнюю линию
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = "dashboard",
+            callback = function()
+                vim.opt_local.showtabline = 0
+            end,
+        })
+
+        vim.api.nvim_create_autocmd("BufEnter", {
+            callback = function()
+                if vim.bo.filetype ~= "dashboard" then
+                    vim.opt.showtabline = 2
+                end
+            end,
+        })
+
+        vim.schedule(function()
+            if vim.bo.filetype == "dashboard" then
+                vim.opt.showtabline = 0
+            end
+        end)
     end,
 }
