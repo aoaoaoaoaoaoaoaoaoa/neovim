@@ -10,8 +10,8 @@ vim.keymap.set('i', '<C-s>', '<cmd>:w<CR>')
 vim.keymap.set('n', '<C-s>', '<cmd>:w<CR>')
 
 -- NvimTree
-vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>')
-vim.keymap.set('n', '<leader>tf', ':NvimTreeFocus<CR>')
+-- vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>')
+-- vim.keymap.set('n', '<leader>tf', ':NvimTreeFocus<CR>')
 
 -- Tabby
 -- закрыть текущую вкладку
@@ -40,6 +40,8 @@ vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", {
 --         desc = "Toggle buffer pin",
 --     }
 -- )
+--BufferLine for closing current Tab
+-- vim.keymap.set('n', '<leader>x', '<cmd>BufferLinePickClose<CR>')
 
 --buffers
 vim.keymap.set("n", "<Tab>", "<cmd>bnext<CR>", {
@@ -63,8 +65,6 @@ vim.keymap.set('n', '<leader>s', ':ToggleTerm direction=float<CR>')
 -- Shortcut for fast esc
 vim.keymap.set('i', 'jj', '<Esc>')
 
---BufferLine for closing current Tab
-vim.keymap.set('n', '<leader>x', '<cmd>BufferLinePickClose<CR>')
 
 --Conform formatting
 vim.keymap.set("n", "<leader>pf", function()
@@ -86,11 +86,11 @@ vim.keymap.set("n", "<leader>pd", "<cmd>delview<cr>", {
 })
 
 -- for path find
-vim.keymap.set("n", "<leader>tp", function()
-  local path = vim.fn.input("Tree path: ", vim.fn.getcwd() .. "/")
-
-  if path ~= "" then
-    require("nvim-tree.api").tree.open()
-    require("nvim-tree.api").tree.change_root(path)
-  end
-end, { desc = "Change root by path" })
+-- vim.keymap.set("n", "<leader>tp", function()
+--   local path = vim.fn.input("Tree path: ", vim.fn.getcwd() .. "/")
+--
+--   if path ~= "" then
+--     require("nvim-tree.api").tree.open()
+--     require("nvim-tree.api").tree.change_root(path)
+--   end
+-- end, { desc = "Change root by path" })

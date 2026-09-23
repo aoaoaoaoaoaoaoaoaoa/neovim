@@ -28,9 +28,9 @@ return {
       { "<leader>ld", desc = "Definition" },
       { "<leader>lk", desc = "Hover" },
 
-      { "<leader>t", group = "Tree", icon = "󰙅" },
-      { "<leader>tt", desc = "Tree Toggle" },
-      { "<leader>tf", desc = "Tree Focus", icon = "󰙅" },
+      -- { "<leader>t", group = "Tree", icon = "󰙅" },
+      -- { "<leader>tt", desc = "Tree Toggle" },
+      -- { "<leader>tf", desc = "Tree Focus", icon = "󰙅" },
 
       { "<leader>n", group = "TodoList", icon = "󰄬" },
       { "<leader>nl", desc = "Open List" },

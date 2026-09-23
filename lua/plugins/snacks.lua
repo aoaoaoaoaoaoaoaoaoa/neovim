@@ -24,5 +24,19 @@ return {
         scope = {
             enabled = true,
         },
+
+        explorer = {
+            enabled = true
+        },
+
+    },
+    keys = {
+        {
+            "<leader>te",
+            function()
+                Snacks.explorer()
+            end,
+            desc = "File Explorer",
+        },
     },
 }
