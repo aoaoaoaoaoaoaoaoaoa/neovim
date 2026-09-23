@@ -33,10 +33,10 @@ return {
                     right = "",
                 },
 
-                component_separators = {
-                    left = "",
-                    right = "",
-                },
+                -- component_separators = {
+                --     left = "",
+                --     right = "",
+                -- },
 
                 globalstatus = true,
 
@@ -68,6 +68,7 @@ return {
                 lualine_c = {
                     {
                         "diff",
+                        separator = "",
                         symbols = {
                             added = " ",
                             modified = " ",
