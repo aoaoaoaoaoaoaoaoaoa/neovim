@@ -6,6 +6,7 @@ return {
     opts = {
         search = {
             incremental = true,
+            -- trigger = "f",
         },
     },
 

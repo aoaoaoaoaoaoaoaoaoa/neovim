@@ -65,14 +65,24 @@ return {
 
         local opts = { buffer = ev.buf }
 
+        -- TypeScript / JavaScript:
+        -- перейти именно в исходник, а не в .d.ts
+        if vim.bo[ev.buf].filetype == "typescript"
+            or vim.bo[ev.buf].filetype == "typescriptreact"
+            or vim.bo[ev.buf].filetype == "javascript"
+            or vim.bo[ev.buf].filetype == "javascriptreact"
+        then
+            vim.keymap.set("n", "gs", "<cmd>LspTypescriptGoToSourceDefinition<CR>", {
+                buffer = ev.buf,
+                desc = "Go to source definition",
+            })
+        end
+
         -- vim.keymap.set("n", "lD", vim.lsp.buf.declaration, opts)
         -- vim.keymap.set("n", "ld", vim.lsp.buf.definition, opts)
         -- vim.keymap.set("n", "lk", vim.lsp.buf.hover, opts)
         -- vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
         -- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-
-        vim.keymap.set({ "n", "v" }, "<space>r", vim.lsp.buf.code_action, opts)
-        vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 
         vim.keymap.set("n", "<space>f", function()
           vim.lsp.buf.format({ async = true })

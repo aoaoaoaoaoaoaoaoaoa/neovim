@@ -23,11 +23,6 @@ return {
 
       { "<leader>e", desc = "Open Diagnostic Window" },
 
-      { "<leader>l", group = "LSP", icon = "󰘦" },
-      { "<leader>lD", desc = "Declaration" },
-      { "<leader>ld", desc = "Definition" },
-      { "<leader>lk", desc = "Hover" },
-
       -- { "<leader>t", group = "Tree", icon = "󰙅" },
       -- { "<leader>tt", desc = "Tree Toggle" },
       -- { "<leader>tf", desc = "Tree Focus", icon = "󰙅" },
@@ -37,7 +32,6 @@ return {
 
       { "<leader>s", desc = "Open Terminal" },
 
-      { "<leader>r", desc = "Ruff", icon = { icon = "󰌠", color = "yellow"}, },
       { "<leader>c", group = "Color Schemes", icon = "󰏘" },
       { "<leader>cs", desc = "Open" },
 
@@ -66,9 +60,6 @@ return {
         -- View for save folders and etc
         { "<leader>pv", desc = "Save View", icon = "󰆓" },
         { "<leader>pd", desc = "Delete View", icon = "󰆴" },
-
-        -- for path find
-        { "<leader>tp", desc = "Change root", icon = "󰉋"},
 
         -- bufferline
        -- { "<leader>b", group = "Bufferline" },
