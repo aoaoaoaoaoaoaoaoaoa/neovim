@@ -52,6 +52,16 @@ return {
     vim.lsp.enable("cssls")
 
     -- diagnostics
+    vim.diagnostic.config({
+        float = {
+            border = "rounded",
+            source = "if_many",
+            header = "",
+            max_width = 80,
+            max_height = 10,
+        },
+    })
+
     vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
     vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
     vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
